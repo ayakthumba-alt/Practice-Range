@@ -19,3 +19,18 @@ nmap 172.25.120.240 -p 60000 -sV -A -T4
 
 ### On the 172.25.120.240 machine, is the rp-lin-x86 file, stripped or not stripped.
 
+    ─# file rp-lin-x86                            
+rp-lin-x86: ELF 32-bit LSB executable, Intel i386, version 1 (GNU/Linux), statically linked, for GNU/Linux 2.6.18, BuildID[sha1]=715c0b6ecee5a654e8c09fd7c81c29ff78d14ce4, stripped<------
+
+### What exploitation type does the executable rp-lin-x86 detect?
+
+strings rp-lin-x86 | grep -i "gadget"  
+    its 'ROPGadget' tool.
+    Answer: ROP
+
+### What architecture is the rp-lin-x86 compiled on?
+    Intel
+
+### 
+
+
